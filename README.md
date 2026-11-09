@@ -6,7 +6,7 @@
 ![Purpose](https://img.shields.io/badge/Purpose-Education%20Only-green)
 
 **Author:** Mavani Dharm  
-**Program:** Cybersecurity program at Networkwalks | **Week:** 02  
+**Program:** Cybersecurity program at Networkwalks | **Batch:** B084 | **Week:** 02  
 **Date:** 09 November 2026  
 **Modules:** W2-PM1 (Multiple Kali Tools) • W2-PM5 (Zenmap Scanning)
 
@@ -113,8 +113,6 @@ whois networkwalks.com
 
 💡 **Why it matters:** the name servers show the website is hosted with HostGator. No personal registrant details were visible. The domain locks protect against accidental or unauthorised changes.
 
-![WHOIS](screenshots/1_whois.png)
-
 ---
 
 ## 2️⃣ WhatWeb – Web Technology Fingerprinting
@@ -138,8 +136,6 @@ whatweb networkwalks.com
 
 💡 **Why it matters:** knowing the CMS and plugin versions lets an attacker look for known issues, so this information should be reviewed and kept updated.
 
-![WhatWeb](screenshots/2_whatweb.png)
-
 ---
 
 ## 3️⃣ Nslookup – DNS Resolution
@@ -158,8 +154,6 @@ nslookup networkwalks.com
 - A second address `64:ff9b::c0e8:d887` is in the `64:ff9b::/96` **NAT64** range. It only encodes the same IPv4 address, so it was most likely created by my network's DNS64 and is not a real IPv6 record of the site.
 
 💡 **Why it matters:** the IP address tells an attacker where the web service lives on the internet.
-
-![Nslookup](screenshots/3_nslookup.png)
 
 ---
 
@@ -182,8 +176,6 @@ curl -I https://networkwalks.com
 
 💡 **Why it matters:** headers leak technology details, and missing security headers reduce browser-side protection.
 
-![Curl](screenshots/4_curl.png)
-
 ---
 
 ## 5️⃣ Wafw00f – Web Application Firewall Detection
@@ -199,8 +191,6 @@ wafw00f networkwalks.com
 > The site `https://networkwalks.com` is behind **ModSecurity (SpiderLabs)** WAF. Number of requests: 2
 
 💡 **Why it matters:** a WAF is a good defence. Knowing its type helps a tester understand the protection level.
-
-![Wafw00f](screenshots/5_wafw00f.png)
 
 ---
 
@@ -225,8 +215,6 @@ dnsrecon -d networkwalks.com
 | SRV | several `_autodiscover._tcp` records → `cpanelemaildiscovery.cpanel.net` |
 
 💡 **Why it matters:** DNS records and software versions help an attacker build a profile of the whole infrastructure (name servers, mail server, e-mail service).
-
-![DNSRecon](screenshots/6_dnsrecon.png)
 
 ---
 
@@ -273,8 +261,6 @@ nmap -sn 192.168.56.0/24
 
 The only live host is **my own Windows PC** (its VirtualBox host-only adapter). Nmap does not list a MAC address for the machine it runs on, and no other device answered in this subnet.
 
-![Zenmap ping scan](screenshots/7_zenmap_ping_scan.png)
-
 ## 9️⃣ Network Topology
 
 1. Click the **Topology** tab in Zenmap.
@@ -282,8 +268,6 @@ The only live host is **my own Windows PC** (its VirtualBox host-only adapter). 
 3. *(Optional)* Click **Save Graphic** to export the topology.
 
 The topology shows `192.168.56.1` connected to `localhost` as a **green** node. Green means "fewer than 3 open ports" in the legend; no port scan was run here.
-
-![Zenmap topology](screenshots/8_zenmap_topology.png)
 
 ---
 
@@ -383,13 +367,14 @@ git push -u origin main
 ```
 
 > 💡 You can also upload everything from the browser: open your repository → **Add file** → **Upload files** → drag the folder contents.  
-> The screenshots must be inside a folder named `screenshots` so the images in this README show correctly.
+> Keep the screenshots in the `screenshots` folder as shown above; they are the evidence for each step.
 
 ---
 
 ## 👤 Author
 
-**Mavani Dharm** – Cybersecurity Student  
-📌 Cybersecurity program at Networkwalks | Week 02
+**Mavani Dharm** – Cybersecurity Student, B084  
+🔗 LinkedIn: <https://www.linkedin.com/in/dharm-mavani-075525344>  
+📌 **Project Information:** Cybersecurity program at Networkwalks | Batch B084 | Week 02 | Repository: GitHub
 
 ⭐ *Made for learning – always hack ethically!*
